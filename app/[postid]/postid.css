@@ -1,0 +1,45 @@
+.page-postid {
+  position: relative;
+  width: calc(100vw - 2vw);
+  max-width: 35em;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+}
+
+.top {
+  right: 0;
+  position: absolute;
+  margin-top: 1em;
+  top: 0;
+  cursor: pointer;
+}
+
+.link{
+    right: 0;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0.5em;
+    margin-right: 0.5em;
+}
+.top ~ div {
+  margin: 0 2em;
+  max-width: 30em;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.085);
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.top ~ div > article {
+  padding: 1em;
+}
+.top ~ div > picture > img {
+  height: auto;
+  object-fit: cover;
+  max-height: 35em;
+}
+
+article{
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}

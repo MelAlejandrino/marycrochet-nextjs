@@ -1,0 +1,64 @@
+.page-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.page-about{
+    max-width: 50em;
+    padding-top: 2em;
+}
+
+.row-1{
+    display: flex;
+    font-size: clamp(1rem, 5vw, 2rem);
+    gap: 1em;
+}
+
+.row-1 picture > img{
+    min-width: 3em;
+    max-width: 6em;
+    height: auto;
+    object-fit: contain;
+}
+
+
+h1{
+    font-weight: bold;
+}
+.row-1 article > div{
+    font-size: clamp(1rem, 3vw, 2rem);
+}
+
+.row-1 article ~ div{
+    display: flex;
+    align-items: end;
+}
+
+.row-2{
+    margin-top: 2vh;
+}
+ul[role="list"]{
+    display: flex;
+    gap: 1em;
+}
+
+ul[role="list"] > li{
+    padding: 0.5em 2em;
+    background-color: rgba(255, 255, 255, 0.121);
+    border-radius: 0.5em;
+}
+.row-3{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.row-3, .row-3 a{
+    color: gray;
+    font-size: clamp(0.7rem, 2vw, 1rem);
+}
+
+.row-3 a{
+    text-decoration: underline;
+    font-style: italic;
+}
