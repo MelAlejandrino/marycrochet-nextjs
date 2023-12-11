@@ -27,11 +27,8 @@ const nextConfig = {
     },
   },
   env: {
-    ACCESS_TOKEN:
-      "EAALZBwisa01IBOZBo5HqGDVIm35QBQXMK8NjMT76uZAeaVZCemck2oFlWYXFK0o3HAE3kBuZCmnJdr9v7wHgtaiMH3B7KLmQcWoKuIUMxDSmsYtgHYAeZCrIz4blG8AZADL8Lf6LdySWMT72VEaKHNsWJNQRBoZCZArLQZCmaBva2vu9V24hOJLgzo4RpeUOhXqSi3klGDE9sE46hCR90ZD",
-    fields:
-      "id,message,permalink_url,reactions.summary(true),full_picture,created_time",
-  },
+    ACCESS_TOKEN: process.env.ACCESS_TOKEN,
+  }
 };
 
 module.exports = nextConfig;

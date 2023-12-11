@@ -18,7 +18,8 @@ export default function ProductsList() {
 
   useEffect(() => {
     async function getProducts() {
-      const initialUrl = `https://graph.facebook.com/v17.0/me/feed?access_token=${process.env.ACCESS_TOKEN}&fields=${process.env.fields}`;
+      const FIELDS="id,message,permalink_url,reactions.summary(true),full_picture,created_time"
+      const initialUrl = `https://graph.facebook.com/v17.0/me/feed?access_token=${process.env.ACCESS_TOKEN}&fields=${FIELDS}`;
       const { data, nextPage: next } = await fetchProducts(initialUrl);
       setProducts(data);
       setNextPage(next);

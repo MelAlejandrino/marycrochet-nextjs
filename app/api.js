@@ -4,7 +4,6 @@ export async function fetchProducts(url) {
     if (cachedData) {
       return JSON.parse(cachedData);
     }
-    console.log(cachedData + 'ficl');
   
     const response = await fetch(url);
     const responseData = await response.json();
