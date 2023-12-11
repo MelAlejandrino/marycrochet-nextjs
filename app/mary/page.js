@@ -4,8 +4,8 @@ import crochet_gif from "@public/crochet_gif.gif";
 import Image from "next/image";
 import bee from "@public/bee_gif.gif";
 
-const page = () => {
-  const textContainersRef = useRef([]);
+const MaryPage = () => {
+  const useTextContainerRef = useRef([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -21,7 +21,7 @@ const page = () => {
       { threshold: 0.5 }
     ); // Adjust threshold as needed
 
-    textContainersRef.current.forEach((ref) => {
+    useTextContainerRef.current.forEach((ref) => {
       observer.observe(ref);
     });
 
@@ -59,7 +59,7 @@ const page = () => {
     <div className="page">
       <div
         className="text-container | hidden"
-        ref={(el) => (textContainersRef.current[0] = el)}
+        ref={(el) => (useTextContainerRef.current[0] = el)}
       >
         <Image
           src={bee}
@@ -78,7 +78,7 @@ const page = () => {
         <div
           className="text-container | hidden"
           key={index}
-          ref={(el) => (textContainersRef.current[index + 1] = el)}
+          ref={(el) => (useTextContainerRef.current[index + 1] = el)}
         >
 
           <p>{item.text}</p>
@@ -86,7 +86,7 @@ const page = () => {
       ))}
       <div
         className="text-container | hidden"
-        ref={(el) => (textContainersRef.current[story.length + 1] = el)}
+        ref={(el) => (useTextContainerRef.current[story.length + 1] = el)}
       >
         <Image src={crochet_gif} alt={crochet_gif} />
         <p>HAPPY CROCHET!</p>
@@ -95,4 +95,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default MaryPage;
