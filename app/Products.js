@@ -76,6 +76,7 @@ export default function ProductsList() {
                 height={720}
                 loading={item.isAboveTheFold ? 'eager' : 'lazy'}
                 quality={30}
+                unoptimized
               />
             </picture>
           );

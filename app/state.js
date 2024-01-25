@@ -1,15 +1,6 @@
-import { create } from 'zustand'
-import { persist, createJSONStorage } from 'zustand/middleware'
+import { create } from 'zustand';
 
-export const useStore = create(
-  persist(
-    (set) => ({
-      products: [],
-      setProducts: (items) => set({ products: items }),
-    }),
-    {
-      name: 'my-app-products',
-      storage: createJSONStorage(() => localStorage),
-    },
-  ),
-)
+export const useStore = create((set) => ({
+  products: [],
+  setProducts: (items) => set({ products: items }),
+}));

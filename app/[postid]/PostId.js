@@ -6,15 +6,15 @@ import Icon from "@mdi/react";
 import { mdiClose } from "@mdi/js";
 import { mdilArrowUpCircle } from "@mdi/light-js";
 import Link from "next/link";
+import { useStore } from '@app/state';
 
 const PostId = () => {
   const params = useParams();
   const postid = params.postid;
   const router = useRouter();
+  const { products } = useStore();
 
-  // localstorage
-  const storedData = JSON.parse(localStorage.getItem("my-app-products"));
-  const product = storedData.state.products.find(
+  const product = products.find(
     (product) => product.id === postid
   );
 
