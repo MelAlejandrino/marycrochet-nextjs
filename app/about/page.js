@@ -32,7 +32,7 @@ const About = () => {
           </div>
           <div className="row-3">
               <p>Mary Crochet @ 2023</p>
-              <p>web development by <Link href="https://www.linkedin.com/in/melcarlo/" target='_blank'>Mel</Link></p>
+              <p>web development by <Link href="https://melcarlo.vercel.app/" target='_blank'>Mel</Link></p>
           </div>
       </div>
     </div>
